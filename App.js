@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
+import ScrollSpy from './src/component/ScrollSpy/ScrollSpy';
 
 function App() {
   return (
-    <div>App</div>
+    <ScrollSpy/>
   )
 }
 export default App;
