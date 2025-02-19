@@ -1,19 +1,23 @@
 import React from "react";
 import { StyledButton, StyledDiv, StyledList } from "./style.js";
 
-function NavigationBar({ menus , currentSection}) {
+function NavigationBar({ menus , navRef , menuRef }) {
   {
     /* we will keep four items in navaigation bar - Home , Contact , About me */
   }
 
   return (
-    <StyledDiv>
+    <StyledDiv
+      ref = {navRef}
+    >
       <StyledList
        
       >
         {menus.map((item) => {
           return (
-            <li>
+            <li
+              ref={menuRef}
+            >
               <StyledButton>{item}</StyledButton>
             </li>
           );

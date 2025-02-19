@@ -1,9 +1,9 @@
-import React , {useEffect} from 'react'
+import React , {useEffect , useRef} from 'react'
 
 
 function Body(props) {
-  const {currentActiveSection , setCurrentSection} = props
-  const sections = ['Home' , 'Contact' , 'About' , 'Portfolio'].map((item)=>{
+  const { menus,  sectionRef} = props
+  const sections = menus?.map((item)=>{
      return (<div>
         <h1>{item}</h1>
         <p
@@ -46,10 +46,11 @@ function Body(props) {
       </p>
       </div>)
   });
-
+ 
   return (
     <>
       <div
+         ref={sectionRef}
         style = {{
            position : 'absolute',
            zIndex : '-1',

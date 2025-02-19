@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import ScrollSpy from './src/component/ScrollSpy/ScrollSpy';
 
 function App() {
-
-  const currentActiveSection = useRef();
+ const navRef = useRef();
+ const sectionRef = useRef();
+ const menuRef = useRef();
+ 
   const menus = ['Home' , 'About' , 'Portfolio' , 'Contact']
   return (
     <div
@@ -16,7 +18,9 @@ function App() {
     >
     <ScrollSpy
      menus = {menus}
-     currentActiveSection = {currentActiveSection}
+     navRef={navRef}
+     sectionRef={sectionRef}
+     menuRef={menuRef}
     />
     </div>
   )
