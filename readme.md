@@ -5,4 +5,4 @@ There are two parts of scrollspy component.
 
 2.When clicked on these links we should also scroll to their corresponding section.
 
-// Used mui5 styled component for css
+3. Used mui5 styled component for css

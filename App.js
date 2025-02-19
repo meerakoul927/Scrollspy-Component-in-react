@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import ScrollSpy from './src/component/ScrollSpy/ScrollSpy';
 
 function App() {
+  const menus = ['Home' , 'About' , 'Portfolio' , 'Contact']
   return (
-    <ScrollSpy/>
+    <ScrollSpy
+     menus = {menus}
+    />
   )
 }
 export default App;

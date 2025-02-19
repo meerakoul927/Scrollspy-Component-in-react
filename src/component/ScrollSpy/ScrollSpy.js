@@ -2,10 +2,13 @@ import React from 'react'
 import NavigationBar from '../NavigationBar/NavigationBar.js'
 import Body from '../Body/Body.js'
 
-function ScrollSpy() {
+function ScrollSpy(props) {
+  const {menus} = props
   return (
    <>
-     <NavigationBar/>
+     <NavigationBar
+      menus = {menus}
+     />
      <Body/>
    </>
   )

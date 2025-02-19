@@ -1,15 +1,13 @@
 import React from "react";
-import { StyledButton , StyledDiv , StyledList} from "./style.js";
+import { StyledButton, StyledDiv, StyledList } from "./style.js";
 
-function NavigationBar() {
+function NavigationBar({ menus }) {
   {
     /* we will keep four items in navaigation bar - Home , Contact , About me */
   }
 
   return (
-    <StyledDiv
-      
-    >
+    <StyledDiv>
       <StyledList
         style={{
           display: "flex",
@@ -18,18 +16,13 @@ function NavigationBar() {
           cursor: "pointer",
         }}
       >
-        <li>
-          <StyledButton>Home</StyledButton>
-        </li>
-        <li>
-          <StyledButton>Contact</StyledButton>
-        </li>
-        <li>
-          <StyledButton>About</StyledButton>
-        </li>
-        <li>
-          <StyledButton>Contact</StyledButton>
-        </li>
+        {menus.map((item) => {
+          return (
+            <li>
+              <StyledButton>{item}</StyledButton>
+            </li>
+          );
+        })}
       </StyledList>
     </StyledDiv>
   );
