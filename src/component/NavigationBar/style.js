@@ -5,8 +5,12 @@ export const StyledDiv = styled('div')(({})=>({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    padding: "1.333rem",
+    padding: "10px",
     backgroundColor: "red",
+    position:'fixed',
+    width : 'inherit',
+    top : '0 !important',
+    left : '0 !important'
 }))
 export const StyledButton = styled('button')(({  }) => ({
   backgroundColor: '#007AFF',

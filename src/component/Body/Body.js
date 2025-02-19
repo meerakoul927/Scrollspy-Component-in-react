@@ -1,7 +1,8 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 
 
-function Body() {
+function Body(props) {
+  const {currentActiveSection , setCurrentSection} = props
   const sections = ['Home' , 'Contact' , 'About' , 'Portfolio'].map((item)=>{
      return (<div>
         <h1>{item}</h1>
@@ -44,10 +45,17 @@ function Body() {
       publishing software like Aldus PageMaker including versions of Lorem Ipsum
       </p>
       </div>)
-  })
+  });
+
   return (
     <>
-      <div>{sections}</div>
+      <div
+        style = {{
+           position : 'absolute',
+           zIndex : '-1',
+           paddingTop:'60px'
+        }}
+      >{sections}</div>
     </>
   )
 }
