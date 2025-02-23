@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import ScrollSpy from './src/component/ScrollSpy/ScrollSpy';
 
 function App() {
- const navRef = useRef();
- const sectionRef = useRef();
- const menuRef = useRef();
+ const navRef = useRef(null);
+ const sectionRef = useRef(null);
+ const menuRef = useRef(null);
+
+ //console.log("value inside the refs", navRef,sectionRef,menuRef);
+ 
  
   const menus = ['Home' , 'About' , 'Portfolio' , 'Contact']
   return (

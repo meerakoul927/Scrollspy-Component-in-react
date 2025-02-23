@@ -1,8 +1,9 @@
-import React , {useEffect , useRef} from 'react'
+import React , {useEffect , useRef , useState} from 'react'
 
 
 function Body(props) {
-  const { menus,  sectionRef} = props
+  const { menus,  sectionRef ,navBarHeight ,setNavBarHeight} = props;
+  const [sectionHeight , setSectionHeight] = useState();
   const sections = menus?.map((item)=>{
      return (<div>
         <h1>{item}</h1>
@@ -47,6 +48,14 @@ function Body(props) {
       </div>)
   });
  
+  useEffect(()=>{
+      const sectionHeight = sectionRef.current.offsetHeight;
+      const childrens = sectionRef.current.children;
+       const sectionsHeight = childrens?.map(item => item.offsetTop - navBarHeight)
+      setSectionHeight(sectionHeight);
+
+  },[sectionRef]);
+  console.log("section height",sectionHeight);
   return (
     <>
       <div
